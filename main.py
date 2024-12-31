@@ -16,7 +16,7 @@ driver.get("https://www.amazon.com/Wilson-Open-Extra-Duty-Tennis/dp/B00IIP4BO0/r
 
 def send_email(price):
     load_dotenv()
-    my_email = 'giovmendez@gmail.com'
+    my_email = os.getenv("my_email")
     my_password = os.getenv("my_password")
     
     connection = smtplib.SMTP('smtp.gmail.com') # Create a connection to the SMTP server
